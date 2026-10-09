@@ -68,12 +68,94 @@ tab1, tab2, tab3 = st.tabs([
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 # ==========================================
-# TAB 1: LIVE DISCOVERY & REPLAY
+# TAB 1: REAL BACKEND SESSIONS & EXPLORATION
 # ==========================================
 with tab1:
     st.header("Exploit Discovery Execution")
-    # Your existing discovery execution and replay controls go here...
-    st.info("Select scenario variant and launch agent exploration.")
+    st.caption("Interact directly with live backend sessions (/api/sessions) or trigger direct AI exploration.")
+    
+    mode = st.radio("Execution Mode", ["Live Session API Interaction", "Direct AI Exploration Agent"], horizontal=True)
+    
+    if mode == "Live Session API Interaction":
+        col1, col2 = st.columns(2)
+        with col1:
+            scenario = st.selectbox("Scenario Variant", ["reward_reset", "upgrade_resale", "secure"])
+            if st.button("Create New Session"):
+                try:
+                    res = requests.post(f"{BACKEND_URL}/api/sessions", json={"scenario": scenario}, timeout=10)
+                    if res.status_code in [200, 201]:
+                        data = res.json()
+                        st.session_state["session_id"] = data.get("session_id") or data.get("id")
+                        st.session_state["session_state"] = data
+                        st.success(f"Session Created: {st.session_state['session_id']}")
+                    else:
+                        st.error(f"Failed to create session: {res.status_code} - {res.text}")
+                except Exception as e:
+                    st.error(f"Backend API offline: {e}")
+                    
+        with col2:
+            if "session_id" in st.session_state:
+                st.subheader(f"Session: {st.session_state['session_id']}")
+                action_type = st.selectbox("Execute Action", ["claim_reward", "buy_item", "upgrade_item", "sell_item", "reset_profile"])
+                if st.button("Send Action"):
+                    sess_id = st.session_state["session_id"]
+                    try:
+                        res = requests.post(
+                            f"{BACKEND_URL}/api/sessions/{sess_id}/actions", 
+                            json={"action": action_type}, 
+                            timeout=10
+                        )
+                        if res.status_code == 200:
+                            st.session_state["session_state"] = res.json()
+                            st.success("Action Executed!")
+                        else:
+                            st.error(f"Action Failed: {res.status_code} - {res.text}")
+                    except Exception as e:
+                        st.error(f"API Error: {e}")
+                        
+        if "session_state" in st.session_state:
+            st.write("---")
+            st.subheader("Current State")
+            st.json(st.session_state["session_state"])
+
+    else:
+        # Direct AI Explorer Execution
+        col_sel, col_btn = st.columns([3, 1])
+        with col_sel:
+            agent_scenario = st.selectbox("Select Scenario for AI Agent", ["reward_reset", "upgrade_resale", "secure"], key="agent_sc")
+        with col_btn:
+            st.write("")
+            st.write("")
+            run_agent = st.button("🚀 Run AI Explorer", use_container_width=True)
+            
+        if run_agent:
+            if AIExplorer is not None:
+                with st.spinner("AI Explorer actively finding exploits..."):
+                    try:
+                        explorer = AIExplorer(scenario=agent_scenario, backend_url=BACKEND_URL)
+                        results = explorer.run()
+                        
+                        st.success("Exploration Finished!")
+                        
+                        # Real Metrics
+                        c1, c2, c3 = st.columns(3)
+                        with c1:
+                            st.markdown(f'<div class="metric-card"><div class="metric-value">{len(results.get("history", []))}</div><div class="metric-label">Steps Taken</div></div>', unsafe_allow_html=True)
+                        with c2:
+                            violation = results.get("violation_found", False)
+                            status_html = '<span class="badge-danger">VIOLATION</span>' if violation else '<span class="badge-success">SECURE</span>'
+                            st.markdown(f'<div class="metric-card"><div class="metric-value">{status_html}</div><div class="metric-label">Result</div></div>', unsafe_allow_html=True)
+                        with c3:
+                            st.markdown(f'<div class="metric-card"><div class="metric-value">{results.get("violation_type", "None")}</div><div class="metric-label">Triggered Rule</div></div>', unsafe_allow_html=True)
+                            
+                        if results.get("history"):
+                            st.subheader("Action History Replay")
+                            df_hist = pd.DataFrame(results["history"])
+                            st.dataframe(df_hist, use_container_width=True)
+                    except Exception as e:
+                        st.error(f"Explorer execution error: {e}")
+            else:
+                st.error("Agent package not imported. Verify `agent/explorer.py` exists.")
 
 # ==========================================
 # TAB 2: OBSERVABILITY & ANALYTICS DASHBOARD
