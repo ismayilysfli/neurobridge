@@ -1,0 +1,13 @@
+run_id,trial,method,variant,model,verified,reproduced,actions,llm_calls,time_to_discovery_seconds,duration_seconds,replay_seconds,invalid_actions,invalid_model_outputs,model_errors,secure_control_status,verified_flags_on_secure,status,seed,report
+3ddf569d-6b50-4ff5-b62a-6ebbbae9a5e7,1,real_llm,reward_reset,gemini-2.5-flash-lite,True,True,6,6,7.709494,7.709685,0.012566,0,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,,3ddf569d-6b50-4ff5-b62a-6ebbbae9a5e7_de13f4e5.json
+4991ac94-6215-465c-99d5-f4e882327beb,1,seeded_state_aware_random,reward_reset,,True,True,5,0,0.012107,0.012135,0.009701,0,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,20261109,4991ac94-6215-465c-99d5-f4e882327beb_e1f776ad.json
+59b0ce09-1d5e-4ca7-b470-bc0d583e5f79,1,real_llm,upgrade_resale,gemini-2.5-flash-lite,True,True,4,4,4.561684,4.561815,0.007817,0,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,,59b0ce09-1d5e-4ca7-b470-bc0d583e5f79_c5d68d51.json
+46b5c845-fcb0-4697-a451-9cabbaddd86e,1,seeded_state_aware_random,upgrade_resale,,True,True,9,0,0.016435,0.016465,0.015247,3,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,20261110,46b5c845-fcb0-4697-a451-9cabbaddd86e_3f0bcab3.json
+303b7f02-ce78-4980-803c-006ac8118f77,1,real_llm,secure,gemini-2.5-flash-lite,False,False,1,4,,5.094873,0,0,0,3,,0,PROVIDER_FAILURE,,303b7f02-ce78-4980-803c-006ac8118f77_b2c97ace.json
+16addfe9-07fb-41f3-8f94-6c994ac98400,1,seeded_state_aware_random,secure,,False,False,12,0,,0.026393,0,2,0,0,,0,ACTION_BUDGET_EXHAUSTED,20261111,16addfe9-07fb-41f3-8f94-6c994ac98400_8517312d.json
+5178ceab-d5d0-40d3-947b-b9b66381e238,2,real_llm,reward_reset,gemini-2.5-flash-lite,False,False,0,3,,4.179499,0,0,0,3,,0,PROVIDER_FAILURE,,5178ceab-d5d0-40d3-947b-b9b66381e238_05802499.json
+eda93f07-58f7-47cf-9a3d-487bd0d7897b,2,seeded_state_aware_random,reward_reset,,True,True,9,0,0.017207,0.01723,0.015503,1,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,20261209,eda93f07-58f7-47cf-9a3d-487bd0d7897b_3e5f5321.json
+8689f478-41e4-4c52-95bf-efa89073cc95,2,real_llm,upgrade_resale,gemini-2.5-flash-lite,False,False,1,6,,9.093686,0,0,0,5,,0,PROVIDER_FAILURE,,8689f478-41e4-4c52-95bf-efa89073cc95_a6667939.json
+fca00c9d-1436-4031-9034-84422b999252,2,seeded_state_aware_random,upgrade_resale,,False,False,12,0,,0.024584,0,8,0,0,,0,ACTION_BUDGET_EXHAUSTED,20261210,fca00c9d-1436-4031-9034-84422b999252_56f968e2.json
+cd3c50d2-118e-417b-adf9-e86e1e01ed20,2,real_llm,secure,gemini-2.5-flash-lite,False,False,0,3,,4.049808,0,0,0,3,,0,PROVIDER_FAILURE,,cd3c50d2-118e-417b-adf9-e86e1e01ed20_1f6eb342.json
+8f1e403a-c9b9-48f2-9016-051db2ae842e,2,seeded_state_aware_random,secure,,False,False,12,0,,0.028246,0,2,0,0,,0,ACTION_BUDGET_EXHAUSTED,20261211,8f1e403a-c9b9-48f2-9016-051db2ae842e_2c152fde.json

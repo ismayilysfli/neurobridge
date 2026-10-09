@@ -1,0 +1,7 @@
+run_id,trial,method,variant,model,verified,reproduced,actions,llm_calls,time_to_discovery_seconds,duration_seconds,replay_seconds,invalid_actions,invalid_model_outputs,model_errors,secure_control_status,verified_flags_on_secure,status,seed,report
+e8ad2e32-4013-4fa9-9e79-a25e72a7333f,1,real_llm,reward_reset,gemini-2.5-flash,True,True,4,4,20.519561,20.519696,0.008549,1,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,,e8ad2e32-4013-4fa9-9e79-a25e72a7333f_280243f8.json
+8b8001ae-6af2-4b91-84b1-8a129439d735,1,seeded_state_aware_random,reward_reset,,True,True,5,0,0.010539,0.010563,0.009159,0,0,0,NO_VIOLATION_OBSERVED,0,REPRODUCED,20262109,8b8001ae-6af2-4b91-84b1-8a129439d735_a7dac2c1.json
+5d5bdebc-4abc-4c38-8d64-6355a6caa9dd,1,real_llm,upgrade_resale,gemini-2.5-flash,False,False,5,7,,93.255981,0,2,0,2,,0,MODEL_BUDGET_EXHAUSTED,,5d5bdebc-4abc-4c38-8d64-6355a6caa9dd_6ce41069.json
+94f3072e-4eb1-458d-ad5d-d3231498e427,1,seeded_state_aware_random,upgrade_resale,,False,False,6,0,,0.012365,0,2,0,0,,0,ACTION_BUDGET_EXHAUSTED,20262110,94f3072e-4eb1-458d-ad5d-d3231498e427_135fab27.json
+dc206b05-6f64-43ad-bf4d-29e187344dbd,1,real_llm,secure,gemini-2.5-flash,False,False,6,6,,38.972253,0,2,0,0,,0,ACTION_BUDGET_EXHAUSTED,,dc206b05-6f64-43ad-bf4d-29e187344dbd_bd83b3aa.json
+a40d5284-1be3-4b6e-b6ff-3034e517febc,1,seeded_state_aware_random,secure,,False,False,6,0,,0.016051,0,1,0,0,,0,ACTION_BUDGET_EXHAUSTED,20262111,a40d5284-1be3-4b6e-b6ff-3034e517febc_ac17816d.json

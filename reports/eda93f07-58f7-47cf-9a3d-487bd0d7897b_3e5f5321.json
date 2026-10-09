@@ -1,0 +1,2383 @@
+{
+  "run_id": "eda93f07-58f7-47cf-9a3d-487bd0d7897b",
+  "model": null,
+  "environment": "owned loopback sandbox",
+  "started_at": "2026-10-09T13:17:46.245457+00:00",
+  "finished_at": "2026-10-09T13:17:46.262688+00:00",
+  "max_steps": 12,
+  "max_llm_calls": 0,
+  "timeout_seconds": 120,
+  "llm_calls": 0,
+  "executed_actions": 9,
+  "duration_seconds": 0.01723,
+  "status": "REPRODUCED",
+  "actions": [
+    {
+      "step": 1,
+      "action": "change_title",
+      "params": {
+        "title": "Tester6136"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 100,
+        "title": "Adventurer",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 100,
+          "title": "Tester6136",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 100,
+        "title": "Tester6136",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001522,
+      "coins_before": 100,
+      "coins_after": 100,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 2,
+      "action": "change_title",
+      "params": {
+        "title": "Tester8888"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 100,
+        "title": "Tester6136",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 100,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 100,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001532,
+      "coins_before": 100,
+      "coins_after": 100,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 3,
+      "action": "buy_item",
+      "params": {
+        "item": "dagger"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 100,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Dagger purchased",
+        "state": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 60,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "latency_seconds": 0.001568,
+      "coins_before": 100,
+      "coins_after": 60,
+      "coins_delta": -40,
+      "inventory_before": [],
+      "inventory_after": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_changed": true
+    },
+    {
+      "step": 4,
+      "action": "buy_item",
+      "params": {
+        "item": "dagger"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 60,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "status": "REJECTED",
+      "error": "HTTP 400: Only one dagger can be held at a time",
+      "after": {
+        "coins": 60,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "latency_seconds": 0.001698,
+      "coins_before": 60,
+      "coins_after": 60,
+      "coins_delta": 0,
+      "inventory_before": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_after": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_changed": false
+    },
+    {
+      "step": 5,
+      "action": "sell_item",
+      "params": {
+        "item": "dagger"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 60,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Dagger sold for 20 coins (spent 40 coins on this item)",
+        "state": {
+          "coins": 80,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 60,
+              "coins_after": 80,
+              "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 80,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001611,
+      "coins_before": 60,
+      "coins_after": 80,
+      "coins_delta": 20,
+      "inventory_before": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_after": [],
+      "inventory_changed": true
+    },
+    {
+      "step": 6,
+      "action": "change_title",
+      "params": {
+        "title": "Tester402"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 80,
+        "title": "Tester8888",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 80,
+          "title": "Tester402",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 60,
+              "coins_after": 80,
+              "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+            },
+            {
+              "step": 5,
+              "action": "change_title",
+              "params": {
+                "title": "Tester402"
+              },
+              "coins_before": 80,
+              "coins_after": 80,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 80,
+        "title": "Tester402",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001426,
+      "coins_before": 80,
+      "coins_after": 80,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 7,
+      "action": "claim_reward",
+      "params": {},
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 80,
+        "title": "Tester402",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Welcome reward credited",
+        "state": {
+          "coins": 130,
+          "title": "Tester402",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 60,
+              "coins_after": 80,
+              "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+            },
+            {
+              "step": 5,
+              "action": "change_title",
+              "params": {
+                "title": "Tester402"
+              },
+              "coins_before": 80,
+              "coins_after": 80,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 6,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 80,
+              "coins_after": 130,
+              "note": "Welcome reward credited"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 130,
+        "title": "Tester402",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.001549,
+      "coins_before": 80,
+      "coins_after": 130,
+      "coins_delta": 50,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 8,
+      "action": "change_title",
+      "params": {
+        "title": "Tester3142"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 130,
+        "title": "Tester402",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 60,
+              "coins_after": 80,
+              "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+            },
+            {
+              "step": 5,
+              "action": "change_title",
+              "params": {
+                "title": "Tester402"
+              },
+              "coins_before": 80,
+              "coins_after": 80,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 6,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 80,
+              "coins_after": 130,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 7,
+              "action": "change_title",
+              "params": {
+                "title": "Tester3142"
+              },
+              "coins_before": 130,
+              "coins_after": 130,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 130,
+        "title": "Tester3142",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.00148,
+      "coins_before": 130,
+      "coins_after": 130,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 9,
+      "action": "claim_reward",
+      "params": {},
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 130,
+        "title": "Tester3142",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Welcome reward credited",
+        "state": {
+          "coins": 180,
+          "title": "Tester3142",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6136"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8888"
+              },
+              "coins_before": 100,
+              "coins_after": 100,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 60,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 60,
+              "coins_after": 80,
+              "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+            },
+            {
+              "step": 5,
+              "action": "change_title",
+              "params": {
+                "title": "Tester402"
+              },
+              "coins_before": 80,
+              "coins_after": 80,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 6,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 80,
+              "coins_after": 130,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 7,
+              "action": "change_title",
+              "params": {
+                "title": "Tester3142"
+              },
+              "coins_before": 130,
+              "coins_after": 130,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 8,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 130,
+              "coins_after": 180,
+              "note": "Welcome reward credited"
+            }
+          ],
+          "violations": [
+            {
+              "rule_id": "R1",
+              "code": "REPEATED_REWARD",
+              "evidence": "Welcome reward credited 2 times",
+              "step": 8
+            }
+          ]
+        },
+        "new_violations": [
+          {
+            "rule_id": "R1",
+            "code": "REPEATED_REWARD",
+            "evidence": "Welcome reward credited 2 times",
+            "step": 8
+          }
+        ]
+      },
+      "after": {
+        "coins": 180,
+        "title": "Tester3142",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.001594,
+      "coins_before": 130,
+      "coins_after": 180,
+      "coins_delta": 50,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    }
+  ],
+  "findings": [
+    {
+      "status": "REPRODUCED",
+      "verified_by": "backend",
+      "violation": {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 8
+      },
+      "hypothesis": "Uniform random choice among actions with observable eligibility.",
+      "discovery_step": 9,
+      "time_to_discovery_seconds": 0.017207
+    }
+  ],
+  "model_calls": [],
+  "invalid_model_outputs": [],
+  "replay": {
+    "status": "REPRODUCED",
+    "variant": "reward_reset",
+    "session_id": "b4cb8fc5-3f06-4aee-a5f0-43583a4e77c8",
+    "actions": [
+      {
+        "step": 1,
+        "action": "change_title",
+        "params": {
+          "title": "Tester6136"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Adventurer",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 100,
+            "title": "Tester6136",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 100,
+          "title": "Tester6136",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001373,
+        "coins_before": 100,
+        "coins_after": 100,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 2,
+        "action": "change_title",
+        "params": {
+          "title": "Tester8888"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Tester6136",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 100,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 100,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001376,
+        "coins_before": 100,
+        "coins_after": 100,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 3,
+        "action": "buy_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Dagger purchased",
+          "state": {
+            "coins": 60,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [
+              {
+                "item": "dagger",
+                "upgraded": false
+              }
+            ],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "latency_seconds": 0.001498,
+        "coins_before": 100,
+        "coins_after": 60,
+        "coins_delta": -40,
+        "inventory_before": [],
+        "inventory_after": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_changed": true
+      },
+      {
+        "step": 4,
+        "action": "buy_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "status": "REJECTED",
+        "error": "HTTP 400: Only one dagger can be held at a time",
+        "after": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "latency_seconds": 0.001469,
+        "coins_before": 60,
+        "coins_after": 60,
+        "coins_delta": 0,
+        "inventory_before": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_after": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_changed": false
+      },
+      {
+        "step": 5,
+        "action": "sell_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Dagger sold for 20 coins (spent 40 coins on this item)",
+          "state": {
+            "coins": 80,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 80,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.002005,
+        "coins_before": 60,
+        "coins_after": 80,
+        "coins_delta": 20,
+        "inventory_before": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_after": [],
+        "inventory_changed": true
+      },
+      {
+        "step": 6,
+        "action": "change_title",
+        "params": {
+          "title": "Tester402"
+        },
+        "before": {
+          "coins": 80,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 80,
+            "title": "Tester402",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 80,
+          "title": "Tester402",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001626,
+        "coins_before": 80,
+        "coins_after": 80,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 7,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 80,
+          "title": "Tester402",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 130,
+            "title": "Tester402",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 6,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 80,
+                "coins_after": 130,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 130,
+          "title": "Tester402",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001689,
+        "coins_before": 80,
+        "coins_after": 130,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 8,
+        "action": "change_title",
+        "params": {
+          "title": "Tester3142"
+        },
+        "before": {
+          "coins": 130,
+          "title": "Tester402",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 130,
+            "title": "Tester3142",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 6,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 80,
+                "coins_after": 130,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 7,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester3142"
+                },
+                "coins_before": 130,
+                "coins_after": 130,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001532,
+        "coins_before": 130,
+        "coins_after": 130,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 9,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 180,
+            "title": "Tester3142",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 6,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 80,
+                "coins_after": 130,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 7,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester3142"
+                },
+                "coins_before": 130,
+                "coins_after": 130,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 8,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 130,
+                "coins_after": 180,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": [
+              {
+                "rule_id": "R1",
+                "code": "REPEATED_REWARD",
+                "evidence": "Welcome reward credited 2 times",
+                "step": 8
+              }
+            ]
+          },
+          "new_violations": [
+            {
+              "rule_id": "R1",
+              "code": "REPEATED_REWARD",
+              "evidence": "Welcome reward credited 2 times",
+              "step": 8
+            }
+          ]
+        },
+        "after": {
+          "coins": 180,
+          "title": "Tester3142",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001541,
+        "coins_before": 130,
+        "coins_after": 180,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      }
+    ],
+    "violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 8
+      }
+    ],
+    "errors": [
+      {
+        "step": 4,
+        "message": "HTTP 400: Only one dagger can be held at a time"
+      }
+    ],
+    "complete": true,
+    "matched_violations": [
+      [
+        "R1",
+        "REPEATED_REWARD"
+      ]
+    ],
+    "expected_violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 8
+      }
+    ],
+    "initial_state": {
+      "coins": 100,
+      "title": "Adventurer",
+      "welcome_reward_claimed": false,
+      "inventory": []
+    },
+    "final_state": {
+      "coins": 180,
+      "title": "Tester3142",
+      "welcome_reward_claimed": true,
+      "inventory": []
+    },
+    "duration_seconds": 0.015503
+  },
+  "secure_control": {
+    "status": "NO_VIOLATION_OBSERVED",
+    "variant": "secure",
+    "session_id": "c30a8446-48a3-43a9-a838-e2b13c2aa4e6",
+    "actions": [
+      {
+        "step": 1,
+        "action": "change_title",
+        "params": {
+          "title": "Tester6136"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Adventurer",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 100,
+            "title": "Tester6136",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 100,
+          "title": "Tester6136",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001302,
+        "coins_before": 100,
+        "coins_after": 100,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 2,
+        "action": "change_title",
+        "params": {
+          "title": "Tester8888"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Tester6136",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 100,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 100,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001444,
+        "coins_before": 100,
+        "coins_after": 100,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 3,
+        "action": "buy_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 100,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Dagger purchased",
+          "state": {
+            "coins": 60,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [
+              {
+                "item": "dagger",
+                "upgraded": false
+              }
+            ],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "latency_seconds": 0.001398,
+        "coins_before": 100,
+        "coins_after": 60,
+        "coins_delta": -40,
+        "inventory_before": [],
+        "inventory_after": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_changed": true
+      },
+      {
+        "step": 4,
+        "action": "buy_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "status": "REJECTED",
+        "error": "HTTP 400: Only one dagger can be held at a time",
+        "after": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "latency_seconds": 0.001308,
+        "coins_before": 60,
+        "coins_after": 60,
+        "coins_delta": 0,
+        "inventory_before": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_after": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_changed": false
+      },
+      {
+        "step": 5,
+        "action": "sell_item",
+        "params": {
+          "item": "dagger"
+        },
+        "before": {
+          "coins": 60,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ]
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Dagger sold for 20 coins (spent 40 coins on this item)",
+          "state": {
+            "coins": 80,
+            "title": "Tester8888",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 80,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001608,
+        "coins_before": 60,
+        "coins_after": 80,
+        "coins_delta": 20,
+        "inventory_before": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ],
+        "inventory_after": [],
+        "inventory_changed": true
+      },
+      {
+        "step": 6,
+        "action": "change_title",
+        "params": {
+          "title": "Tester402"
+        },
+        "before": {
+          "coins": 80,
+          "title": "Tester8888",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 80,
+            "title": "Tester402",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 80,
+          "title": "Tester402",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.003294,
+        "coins_before": 80,
+        "coins_after": 80,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 7,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 80,
+          "title": "Tester402",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 130,
+            "title": "Tester402",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 6,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 80,
+                "coins_after": 130,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 130,
+          "title": "Tester402",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.00227,
+        "coins_before": 80,
+        "coins_after": 130,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 8,
+        "action": "change_title",
+        "params": {
+          "title": "Tester3142"
+        },
+        "before": {
+          "coins": 130,
+          "title": "Tester402",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 130,
+            "title": "Tester3142",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6136"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8888"
+                },
+                "coins_before": 100,
+                "coins_after": 100,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "buy_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 100,
+                "coins_after": 60,
+                "note": "Dagger purchased"
+              },
+              {
+                "step": 4,
+                "action": "sell_item",
+                "params": {
+                  "item": "dagger"
+                },
+                "coins_before": 60,
+                "coins_after": 80,
+                "note": "Dagger sold for 20 coins (spent 40 coins on this item)"
+              },
+              {
+                "step": 5,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester402"
+                },
+                "coins_before": 80,
+                "coins_after": 80,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 6,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 80,
+                "coins_after": 130,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 7,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester3142"
+                },
+                "coins_before": 130,
+                "coins_after": 130,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.002078,
+        "coins_before": 130,
+        "coins_after": 130,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 9,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "REJECTED",
+        "error": "HTTP 400: Welcome reward already claimed",
+        "after": {
+          "coins": 130,
+          "title": "Tester3142",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001903,
+        "coins_before": 130,
+        "coins_after": 130,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      }
+    ],
+    "violations": [],
+    "errors": [
+      {
+        "step": 4,
+        "message": "HTTP 400: Only one dagger can be held at a time"
+      },
+      {
+        "step": 9,
+        "message": "HTTP 400: Welcome reward already claimed"
+      }
+    ],
+    "complete": true,
+    "matched_violations": [],
+    "expected_violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 8
+      }
+    ],
+    "initial_state": {
+      "coins": 100,
+      "title": "Adventurer",
+      "welcome_reward_claimed": false,
+      "inventory": []
+    },
+    "final_state": {
+      "coins": 130,
+      "title": "Tester3142",
+      "welcome_reward_claimed": true,
+      "inventory": []
+    },
+    "duration_seconds": 0.018074,
+    "label": "Regression check against secure control"
+  },
+  "errors": [
+    {
+      "phase": "action",
+      "step": 4,
+      "message": "HTTP 400: Only one dagger can be held at a time"
+    }
+  ],
+  "usage": {},
+  "cost": "Cost not measured",
+  "discovery_method": "seeded_state_aware_random",
+  "seed": 20261209,
+  "game": "Merchant Town (testing sandbox)",
+  "public_rules": [
+    {
+      "id": "R1",
+      "text": "The welcome reward can be credited only once per player, regardless of profile changes."
+    },
+    {
+      "id": "R2",
+      "text": "Buying, upgrading and reselling an item must never return more coins than the player spent on that item."
+    }
+  ],
+  "public_spec": {
+    "game": "Merchant Town (testing sandbox)",
+    "starting_coins": 100,
+    "rules": [
+      {
+        "id": "R1",
+        "text": "The welcome reward can be credited only once per player, regardless of profile changes."
+      },
+      {
+        "id": "R2",
+        "text": "Buying, upgrading and reselling an item must never return more coins than the player spent on that item."
+      }
+    ],
+    "actions": [
+      {
+        "name": "claim_reward",
+        "description": "Claim the one-time welcome reward (+50 coins).",
+        "parameters": {}
+      },
+      {
+        "name": "change_title",
+        "description": "Change the cosmetic profile title.",
+        "parameters": {
+          "title": "string"
+        }
+      },
+      {
+        "name": "buy_item",
+        "description": "Buy a dagger for 40 coins.",
+        "parameters": {
+          "item": "dagger"
+        }
+      },
+      {
+        "name": "upgrade_item",
+        "description": "Upgrade a dagger for 10 coins.",
+        "parameters": {
+          "item": "dagger"
+        }
+      },
+      {
+        "name": "sell_item",
+        "description": "Sell a dagger back to the shop.",
+        "parameters": {
+          "item": "dagger"
+        }
+      }
+    ]
+  },
+  "initial_state": {
+    "coins": 100,
+    "title": "Adventurer",
+    "welcome_reward_claimed": false,
+    "inventory": []
+  },
+  "session_id": "782c0f3e-e5cb-4d9e-bac5-ff20c9d7de04",
+  "final_state": {
+    "coins": 180,
+    "title": "Tester3142",
+    "welcome_reward_claimed": true,
+    "inventory": []
+  },
+  "operator_variant": "reward_reset",
+  "evaluation_id": "de56a0c42dc4",
+  "trial": 2
+}

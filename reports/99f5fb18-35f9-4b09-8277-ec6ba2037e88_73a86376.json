@@ -1,0 +1,1173 @@
+{
+  "run_id": "99f5fb18-35f9-4b09-8277-ec6ba2037e88",
+  "model": null,
+  "environment": "owned loopback sandbox",
+  "started_at": "2026-10-09T13:22:07.133832+00:00",
+  "finished_at": "2026-10-09T13:22:07.145043+00:00",
+  "max_steps": 12,
+  "max_llm_calls": 0,
+  "timeout_seconds": 120,
+  "llm_calls": 0,
+  "executed_actions": 5,
+  "duration_seconds": 0.01121,
+  "status": "REPRODUCED",
+  "actions": [
+    {
+      "step": 1,
+      "action": "claim_reward",
+      "params": {},
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 100,
+        "title": "Adventurer",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Welcome reward credited",
+        "state": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 150,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.001526,
+      "coins_before": 100,
+      "coins_after": 150,
+      "coins_delta": 50,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 2,
+      "action": "change_title",
+      "params": {
+        "title": "Tester8025"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 150,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 150,
+          "title": "Tester8025",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8025"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 150,
+        "title": "Tester8025",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001621,
+      "coins_before": 150,
+      "coins_after": 150,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 3,
+      "action": "change_title",
+      "params": {
+        "title": "Tester2261"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 150,
+        "title": "Tester8025",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 150,
+          "title": "Tester2261",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8025"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "change_title",
+              "params": {
+                "title": "Tester2261"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 150,
+        "title": "Tester2261",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001578,
+      "coins_before": 150,
+      "coins_after": 150,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 4,
+      "action": "change_title",
+      "params": {
+        "title": "Tester6084"
+      },
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 150,
+        "title": "Tester2261",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Cosmetic title changed",
+        "state": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": false,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8025"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "change_title",
+              "params": {
+                "title": "Tester2261"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 4,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6084"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 150,
+        "title": "Tester6084",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "latency_seconds": 0.001766,
+      "coins_before": 150,
+      "coins_after": 150,
+      "coins_delta": 0,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 5,
+      "action": "claim_reward",
+      "params": {},
+      "reason": "Uniform random choice among actions with observable eligibility.",
+      "before": {
+        "coins": 150,
+        "title": "Tester6084",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Welcome reward credited",
+        "state": {
+          "coins": 200,
+          "title": "Tester6084",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "change_title",
+              "params": {
+                "title": "Tester8025"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 3,
+              "action": "change_title",
+              "params": {
+                "title": "Tester2261"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 4,
+              "action": "change_title",
+              "params": {
+                "title": "Tester6084"
+              },
+              "coins_before": 150,
+              "coins_after": 150,
+              "note": "Cosmetic title changed"
+            },
+            {
+              "step": 5,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 150,
+              "coins_after": 200,
+              "note": "Welcome reward credited"
+            }
+          ],
+          "violations": [
+            {
+              "rule_id": "R1",
+              "code": "REPEATED_REWARD",
+              "evidence": "Welcome reward credited 2 times",
+              "step": 5
+            }
+          ]
+        },
+        "new_violations": [
+          {
+            "rule_id": "R1",
+            "code": "REPEATED_REWARD",
+            "evidence": "Welcome reward credited 2 times",
+            "step": 5
+          }
+        ]
+      },
+      "after": {
+        "coins": 200,
+        "title": "Tester6084",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.001806,
+      "coins_before": 150,
+      "coins_after": 200,
+      "coins_delta": 50,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    }
+  ],
+  "findings": [
+    {
+      "status": "REPRODUCED",
+      "verified_by": "backend",
+      "violation": {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 5
+      },
+      "hypothesis": "Uniform random choice among actions with observable eligibility.",
+      "discovery_step": 5,
+      "time_to_discovery_seconds": 0.011185
+    }
+  ],
+  "model_calls": [],
+  "invalid_model_outputs": [],
+  "replay": {
+    "status": "REPRODUCED",
+    "variant": "reward_reset",
+    "session_id": "5957e2e3-488f-4a61-945e-f91c35202618",
+    "actions": [
+      {
+        "step": 1,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 100,
+          "title": "Adventurer",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 150,
+            "title": "Adventurer",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.00134,
+        "coins_before": 100,
+        "coins_after": 150,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 2,
+        "action": "change_title",
+        "params": {
+          "title": "Tester8025"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester8025",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester8025",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001503,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 3,
+        "action": "change_title",
+        "params": {
+          "title": "Tester2261"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Tester8025",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester2261",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester2261"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester2261",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001727,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 4,
+        "action": "change_title",
+        "params": {
+          "title": "Tester6084"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Tester2261",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester6084",
+            "welcome_reward_claimed": false,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester2261"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 4,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6084"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "latency_seconds": 0.001483,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 5,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 200,
+            "title": "Tester6084",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester2261"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 4,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6084"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 5,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 150,
+                "coins_after": 200,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": [
+              {
+                "rule_id": "R1",
+                "code": "REPEATED_REWARD",
+                "evidence": "Welcome reward credited 2 times",
+                "step": 5
+              }
+            ]
+          },
+          "new_violations": [
+            {
+              "rule_id": "R1",
+              "code": "REPEATED_REWARD",
+              "evidence": "Welcome reward credited 2 times",
+              "step": 5
+            }
+          ]
+        },
+        "after": {
+          "coins": 200,
+          "title": "Tester6084",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001459,
+        "coins_before": 150,
+        "coins_after": 200,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      }
+    ],
+    "violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 5
+      }
+    ],
+    "errors": [],
+    "complete": true,
+    "matched_violations": [
+      [
+        "R1",
+        "REPEATED_REWARD"
+      ]
+    ],
+    "expected_violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 5
+      }
+    ],
+    "initial_state": {
+      "coins": 100,
+      "title": "Adventurer",
+      "welcome_reward_claimed": false,
+      "inventory": []
+    },
+    "final_state": {
+      "coins": 200,
+      "title": "Tester6084",
+      "welcome_reward_claimed": true,
+      "inventory": []
+    },
+    "duration_seconds": 0.00906
+  },
+  "secure_control": {
+    "status": "NO_VIOLATION_OBSERVED",
+    "variant": "secure",
+    "session_id": "671273c8-67cc-4c5c-87ce-8646e0c41cf0",
+    "actions": [
+      {
+        "step": 1,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 100,
+          "title": "Adventurer",
+          "welcome_reward_claimed": false,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Welcome reward credited",
+          "state": {
+            "coins": 150,
+            "title": "Adventurer",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001428,
+        "coins_before": 100,
+        "coins_after": 150,
+        "coins_delta": 50,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 2,
+        "action": "change_title",
+        "params": {
+          "title": "Tester8025"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester8025",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester8025",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001489,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 3,
+        "action": "change_title",
+        "params": {
+          "title": "Tester2261"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Tester8025",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester2261",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester2261"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester2261",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001795,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 4,
+        "action": "change_title",
+        "params": {
+          "title": "Tester6084"
+        },
+        "before": {
+          "coins": 150,
+          "title": "Tester2261",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "ACCEPTED",
+        "response": {
+          "result": "Cosmetic title changed",
+          "state": {
+            "coins": 150,
+            "title": "Tester6084",
+            "welcome_reward_claimed": true,
+            "inventory": [],
+            "history": [
+              {
+                "step": 1,
+                "action": "claim_reward",
+                "params": {},
+                "coins_before": 100,
+                "coins_after": 150,
+                "note": "Welcome reward credited"
+              },
+              {
+                "step": 2,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester8025"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 3,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester2261"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              },
+              {
+                "step": 4,
+                "action": "change_title",
+                "params": {
+                  "title": "Tester6084"
+                },
+                "coins_before": 150,
+                "coins_after": 150,
+                "note": "Cosmetic title changed"
+              }
+            ],
+            "violations": []
+          },
+          "new_violations": []
+        },
+        "after": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001871,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      },
+      {
+        "step": 5,
+        "action": "claim_reward",
+        "params": {},
+        "before": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "status": "REJECTED",
+        "error": "HTTP 400: Welcome reward already claimed",
+        "after": {
+          "coins": 150,
+          "title": "Tester6084",
+          "welcome_reward_claimed": true,
+          "inventory": []
+        },
+        "latency_seconds": 0.001533,
+        "coins_before": 150,
+        "coins_after": 150,
+        "coins_delta": 0,
+        "inventory_before": [],
+        "inventory_after": [],
+        "inventory_changed": false
+      }
+    ],
+    "violations": [],
+    "errors": [
+      {
+        "step": 5,
+        "message": "HTTP 400: Welcome reward already claimed"
+      }
+    ],
+    "complete": true,
+    "matched_violations": [],
+    "expected_violations": [
+      {
+        "rule_id": "R1",
+        "code": "REPEATED_REWARD",
+        "evidence": "Welcome reward credited 2 times",
+        "step": 5
+      }
+    ],
+    "initial_state": {
+      "coins": 100,
+      "title": "Adventurer",
+      "welcome_reward_claimed": false,
+      "inventory": []
+    },
+    "final_state": {
+      "coins": 150,
+      "title": "Tester6084",
+      "welcome_reward_claimed": true,
+      "inventory": []
+    },
+    "duration_seconds": 0.009699,
+    "label": "Regression check against secure control"
+  },
+  "errors": [],
+  "usage": {},
+  "cost": "Cost not measured",
+  "discovery_method": "seeded_state_aware_random",
+  "seed": 20261109,
+  "game": "Merchant Town (testing sandbox)",
+  "public_rules": [
+    {
+      "id": "R1",
+      "text": "The welcome reward can be credited only once per player, regardless of profile changes."
+    },
+    {
+      "id": "R2",
+      "text": "Buying, upgrading and reselling an item must never return more coins than the player spent on that item."
+    }
+  ],
+  "public_spec": {
+    "game": "Merchant Town (testing sandbox)",
+    "starting_coins": 100,
+    "rules": [
+      {
+        "id": "R1",
+        "text": "The welcome reward can be credited only once per player, regardless of profile changes."
+      },
+      {
+        "id": "R2",
+        "text": "Buying, upgrading and reselling an item must never return more coins than the player spent on that item."
+      }
+    ],
+    "actions": [
+      {
+        "name": "claim_reward",
+        "description": "Claim the one-time welcome reward (+50 coins).",
+        "parameters": {}
+      },
+      {
+        "name": "change_title",
+        "description": "Change the cosmetic profile title.",
+        "parameters": {
+          "title": "string"
+        }
+      },
+      {
+        "name": "buy_item",
+        "description": "Buy a dagger for 40 coins.",
+        "parameters": {
+          "item": "dagger"
+        }
+      },
+      {
+        "name": "upgrade_item",
+        "description": "Upgrade a dagger for 10 coins.",
+        "parameters": {
+          "item": "dagger"
+        }
+      },
+      {
+        "name": "sell_item",
+        "description": "Sell a dagger back to the shop.",
+        "parameters": {
+          "item": "dagger"
+        }
+      }
+    ]
+  },
+  "initial_state": {
+    "coins": 100,
+    "title": "Adventurer",
+    "welcome_reward_claimed": false,
+    "inventory": []
+  },
+  "session_id": "2de1746f-1ef8-41a9-a0c5-0ed40be1b73d",
+  "final_state": {
+    "coins": 200,
+    "title": "Tester6084",
+    "welcome_reward_claimed": true,
+    "inventory": []
+  },
+  "operator_variant": "reward_reset",
+  "evaluation_id": "9dfb6734bfff",
+  "trial": 1
+}

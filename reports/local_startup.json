@@ -1,0 +1,15 @@
+{
+  "tested_at": "2026-10-09T13:24:14.532289+00:00",
+  "cold_start": {
+    "status": "ok",
+    "started": true
+  },
+  "rerun": {
+    "status": "ok",
+    "started": false
+  },
+  "real_http_action": "accepted",
+  "backend_host": "127.0.0.1",
+  "port": 45707,
+  "earlier_attempt": "Port 8001 was occupied by another service; startup correctly reported failure. Retried on an available loopback port."
+}
