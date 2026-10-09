@@ -14,7 +14,7 @@ from agent.replay import attach_replay, secure_control
 from agent.report import save_report, as_json
 from frontend.local_backend import ensure_backend
 
-st.set_page_config(page_title='NeuroBridge | Game Economy Exploit Tester', page_icon='🎮', layout='wide')
+st.set_page_config(page_title='Xploit | Game Economy Exploit Tester', page_icon='🎮', layout='wide')
 
 # NB_INTEGRATED_UI_20261009
 st.markdown("""
@@ -41,8 +41,8 @@ except (FileNotFoundError, st.errors.StreamlitSecretNotFoundError):
 def setting(name, default=''):
     return secrets.get(name, os.getenv(name, default))
 
-st.markdown('<div class="nb-kicker">NEUROBRIDGE / AI GAMING SECURITY</div>', unsafe_allow_html=True)
-st.title('🎮 NeuroBridge · Game Economy Exploit Tester')
+st.markdown('<div class="nb-kicker">XPLOIT / AI GAMING SECURITY</div>', unsafe_allow_html=True)
+st.title('🎮 Xploit · Game Economy Exploit Tester')
 st.markdown('<div class="nb-dek">AI-guided exploration · Verified exploits · Fresh-session replay</div>', unsafe_allow_html=True)
 base = setting('SANDBOX_API', 'http://127.0.0.1:8000')
 configured = all(setting(k) for k in ('LLM_BASE_URL', 'LLM_API_KEY', 'LLM_MODEL'))
