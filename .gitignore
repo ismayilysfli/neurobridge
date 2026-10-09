@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/secrets.toml
+*.log
+reports/.backend.lock
+reports/.backend.pid
