@@ -1,5 +1,19 @@
 # Executed acceptance checks
 
+## Follow-up validation on Windows, 2026-10-09
+
+- **Passed:** 51 tests on Python 3.14 / Streamlit 1.65.0, including the 49 existing tests. Initial collection failed because Streamlit was absent; a project-local virtual environment resolved it. Pytest's temporary directory needed an explicit workspace path.
+- **Passed:** Three fresh public-browser model runs, 16 actual Gemini 3.1 Flash-Lite calls. Trading produced a new backend-verified finding in four actions and replayed successfully. Reward and secure control exhausted six-action budgets without findings; zero provider errors in this sample.
+- **Passed:** Public and local fresh-browser recorded replay, secure control, and JSON export. Saved evidence remained explicitly labeled. The public app still runs the original prompt.
+- **Passed:** New equal-action-budget comparison using the existing seeded random baseline; deployment/local observed-transition parity checked. Separate hosts and one trial per environment limit interpretation. See the separate comparison in RESULTS.md.
+- **Passed:** Public-only change summaries and untried-action context have regression coverage. Local timeline exposes eligibility/profile changes. `backend/`, the API contract, and original backend tests are unchanged.
+- **Blocked:** This checkout has no local Gemini key or model environment configuration. Fresh local inference and effectiveness testing of the revised prompt remain unperformed. Public deployment credentials were neither retrieved nor copied.
+- **Remaining:** No independent held-out scenario was supplied. No statistical superiority, general security, or durable hosting claim.
+
+Details and repeatable commands: [follow-up validation](VALIDATION_2026-10-09.md).
+
+## Earlier acceptance record (preserved)
+
 - Backend health and public specification: successful actual HTTP requests.
 - Real model connection and validated action: Gemini 2.5 Flash-Lite, Gemini 2.5 Flash, and Gemini 3.1 Flash-Lite each selected and executed a real action. Saved connectivity probes are separate from benchmark denominators.
 - Multistep exploration: actual reward and trading runs; model hypotheses, prompts, API responses and state transitions saved.

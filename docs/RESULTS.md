@@ -1,5 +1,21 @@
 # Measured evaluation results
 
+## Follow-up validation, 2026-10-09 18:43–18:50 Asia/Baku
+
+Three fresh public-browser Gemini 3.1 Flash-Lite runs used **6 attempted actions, 7 model calls, and 120 seconds** each. There were 16 actual model calls total, zero provider errors, and zero invalid model outputs. The deployed original prompt was used; the local prompt revision is **not model-validated**.
+
+| Environment | AI finding / actions | Seeded random finding / actions | AI outcome |
+| --- | --- | --- | --- |
+| reward_reset | No / 6 | No / 6 | Action budget exhausted; eligibility changed on the final action |
+| upgrade_resale | Yes, reproduced / 4 | No / 6 | Backend-verified finding, automatically replayed |
+| secure | No / 6 | No / 6 | Action budget exhausted |
+
+Random seeds were 2026100901, 2026100902, and 2026100903, respectively. This comparison reuses `agent.evaluation.random_baseline` and its summary/replay functions. The AI ran on the existing public deployment; the baseline ran against local HTTP. Public specs and all recorded actions' before/after states and acceptance outcomes matched in local replay, including the trading violation. That check does not prove hidden implementation parity. These six rows remain separate from the original same-deployment campaigns below; one trial per environment does not establish superiority. The fresh trading sequence also produced `NO_VIOLATION_OBSERVED` in a local secure-control session.
+
+Evidence: [comparison and seeds](../reports/browser_comparison_93ef1ac4d2d6/comparison.json), [reward run](../reports/browser_05f52ec83457/browser_live_download.json), [trading run](../reports/browser_55ed3e3c7f2d/browser_live_download.json), [secure run](../reports/browser_dbbd59dc27b5/browser_live_download.json). [Validation notes](VALIDATION_2026-10-09.md) explain changes, failures, and demo setup. All previous reports and campaign results remain unchanged.
+
+## Original campaign results (preserved)
+
 Generated: 2026-10-09T13:32:15.634310+00:00. All completed campaigns, including failures, are listed below.
 
 Environments: Merchant Town owned sandbox; `reward_reset`, `upgrade_resale`, and `secure`. All runs create fresh sessions. Scenario labels, backend source and verifier evidence are withheld from the model. The model receives only public rules/schemas and actual observations.

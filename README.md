@@ -2,6 +2,8 @@
 
 AI-guided adversarial testing for owned game economies. A real language model chooses actions from public game rules and schemas, executes them through HTTP, and observes state changes. Only the backend verifier can confirm a rule violation; replay must reproduce the same rule in a fresh session. Secure-control checks apply to the recorded sequence only.
 
+Latest follow-up: [validation and Windows demo setup](docs/VALIDATION_2026-10-09.md). 51 tests pass; fresh public Gemini runs reproduced a trading finding. The local prompt revision still needs real-model validation; the existing public demo uses the original prompt.
+
 ## Run locally
 
 Python 3.10+ (tested on 3.12). From this directory:
