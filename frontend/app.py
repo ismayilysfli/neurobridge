@@ -158,57 +158,81 @@ with tab1:
                 st.error("Agent package not imported. Verify `agent/explorer.py` exists.")
 
 # ==========================================
-# TAB 2: OBSERVABILITY & ANALYTICS DASHBOARD
+# TAB 2: DYNAMIC OBSERVABILITY FROM REAL LOGS
 # ==========================================
 with tab2:
-    st.header("Agent Observability & Benchmark Metrics")
+    st.header("Observability & Benchmark Telemetry")
+    st.caption("Metrics dynamically calculated directly from saved evaluation files in `reports/`.")
     
-    # KPI Metrics Row
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("State Space Coverage", "94.2%", "+12% vs Random")
-    m2.metric("Avg Discovery Steps", "3.2 Steps", "-14.8 Steps vs Random")
-    m3.metric("False Positive Rate", "0.0%", "Target: 0.0%")
-    m4.metric("Test Invariants Enforced", "2 Rules (R1, R2)", "Active")
-
-    st.markdown("---")
-
-    col_a, col_b = st.columns(2)
-
-    with col_a:
-        st.subheader("📈 State Economy Trajectory (Coins over Time)")
-        # Sample trajectory comparing Secure vs Exploited runs
-        trajectory_data = pd.DataFrame({
-            "Step": [0, 1, 2, 3, 4],
-            "Secure Control": [100, 150, 150, 110, 120],
-            "Exploit (reward_reset)": [100, 150, 150, 200, 250],
-            "Exploit (upgrade_resale)": [100, 150, 110, 100, 180]
-        }).set_index("Step")
-        st.line_chart(trajectory_data)
-
-    with col_b:
-        st.subheader("🎯 Action Selection Distribution (AI Agent)")
-        action_counts = pd.DataFrame({
-            "Action": ["claim_reward", "change_title", "buy_item", "upgrade_item", "sell_item"],
-            "Executions": [42, 38, 25, 20, 18]
-        }).set_index("Action")
-        st.bar_chart(action_counts)
-
-    st.markdown("---")
-    st.subheader("⚡ Agent Exploration Efficiency Comparison")
+    report_files = glob.glob("reports/evaluation_*.json")
     
-    comparison_df = pd.DataFrame([
-        {"Variant": "reward_reset (R1)", "AI Explorer Discovery Rate": "100%", "Random Baseline Discovery Rate": "< 12%", "Speedup Factor": "8.3x"},
-        {"Variant": "upgrade_resale (R2)", "AI Explorer Discovery Rate": "100%", "Random Baseline Discovery Rate": "< 5%", "Speedup Factor": "20.0x"},
-        {"Variant": "secure (Control)", "AI Explorer Discovery Rate": "0% FP", "Random Baseline Discovery Rate": "0% FP", "Speedup Factor": "Baseline"}
-    ])
-    st.dataframe(comparison_df, use_container_width=True)
+    if report_files:
+        parsed_reports = []
+        for rf in report_files:
+            try:
+                with open(rf, "r") as f:
+                    content = json.load(f)
+                    content["_file"] = os.path.basename(rf)
+                    parsed_reports.append(content)
+            except Exception:
+                pass
+                
+        if parsed_reports:
+            # Dynamically compute metrics from actual files
+            total_runs = len(parsed_reports)
+            violations_found = sum(1 for r in parsed_reports if r.get("metrics", {}).get("violations_found", 0) > 0 or r.get("violation_found"))
+            discovery_rate = (violations_found / total_runs * 100) if total_runs > 0 else 0.0
+            
+            # Dynamic Summary Metrics
+            m1, m2, m3, m4 = st.columns(4)
+            with m1:
+                st.markdown(f'<div class="metric-card"><div class="metric-value">{total_runs}</div><div class="metric-label">Total Evaluated Runs</div></div>', unsafe_allow_html=True)
+            with m2:
+                st.markdown(f'<div class="metric-card"><div class="metric-value">{violations_found}</div><div class="metric-label">Exploits Discovered</div></div>', unsafe_allow_html=True)
+            with m3:
+                st.markdown(f'<div class="metric-card"><div class="metric-value">{discovery_rate:.1f}%</div><div class="metric-label">Calculated Discovery Rate</div></div>', unsafe_allow_html=True)
+            with m4:
+                st.markdown(f'<div class="metric-card"><div class="metric-value">{len(report_files)}</div><div class="metric-label">Report Log Files</div></div>', unsafe_allow_html=True)
+                
+            st.write("")
+            st.divider()
+            
+            # Formatted Data Table of Real Evaluation Files
+            st.subheader("Evaluated Report Logs")
+            table_rows = []
+            for r in parsed_reports:
+                metrics = r.get("metrics", {})
+                table_rows.append({
+                    "Report File": r.get("_file"),
+                    "Evaluation ID": r.get("evaluation_id", "N/A"),
+                    "Total Steps": r.get("total_steps") or metrics.get("total_steps") or len(r.get("history", [])),
+                    "Violation Discovered": "YES" if (r.get("violation_found") or metrics.get("violations_found", 0) > 0) else "NO",
+                    "Rule Triggered": r.get("violation_type") or r.get("rule_violated") or "None"
+                })
+            
+            df_reports = pd.DataFrame(table_rows)
+            st.dataframe(df_reports, use_container_width=True)
+            
+            # Dynamic Steps Chart
+            st.subheader("Execution Steps per Evaluation Run")
+            chart_df = df_reports.set_index("Report File")[["Total Steps"]]
+            st.bar_chart(chart_df)
+    else:
+        st.warning("No evaluation logs found in `reports/`. Run your test campaigns to generate dynamic reports.")
 
 # ==========================================
-# TAB 3: SYSTEM SPEC & INVARIANTS
+# TAB 3: SYSTEM SPECIFICATIONS & INVARIANTS
 # ==========================================
 with tab3:
-    st.header("Formal Rules & Invariants")
-    st.json({
-        "R1": "The welcome reward can be credited only once per player, regardless of profile changes.",
-        "R2": "Buying, upgrading and reselling an item must never return more coins than the player spent on that item."
-    })
+    st.header("Formal Invariant Specifications")
+    st.markdown("""
+    ### Enforced System Rules
+    * **Rule R1 (Reward Uniqueness):** Welcome reward must be claimed strictly once per account. Profile title resets or state re-initializations must never reset reward eligibility.
+    * **Rule R2 (Non-Profitable Resale):** Item buy (`BUY_PRICE = 40`), upgrade (`UPGRADE_PRICE = 10`), and sell loops must enforce non-positive net yield ($\le 0$).
+    
+    ### System Economy Parameters
+    * **`START_COINS`**: `100`
+    * **`BUY_PRICE`**: `40`
+    * **`UPGRADE_PRICE`**: `10`
+    * **`SELL_PRICE`**: `20`
+    """)
