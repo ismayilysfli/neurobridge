@@ -1,10 +1,71 @@
-import streamlit as st
+import json
+import os
+import glob
+import requests
 import pandas as pd
+import streamlit as st
 
-st.set_page_config(page_title="NeuroBridge | Game Economy Exploit Tester", layout="wide")
+# Direct import of core agent explorer and test harness
+try:
+    from agent.explorer import AIExplorer
+    from agent.replay import ReplayEngine
+except ImportError:
+    AIExplorer = None
+    ReplayEngine = None
+
+st.set_page_config(
+    page_title="NeuroBridge: AI Game Economy Exploit Tester",
+    page_icon="🎮",
+    layout="wide"
+)
+
+# --- CSS STYLING ---
+st.markdown("""
+    <style>
+    .metric-card {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .metric-value {
+        font-size: 26px;
+        font-weight: bold;
+        color: #38bdf8;
+    }
+    .metric-label {
+        font-size: 13px;
+        color: #94a3b8;
+        margin-top: 4px;
+    }
+    .badge-success {
+        background-color: #065f46;
+        color: #34d399;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+    }
+    .badge-danger {
+        background-color: #881337;
+        color: #f87171;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("🎮 NeuroBridge: AI-Powered Game Economy Exploit Tester")
 
-tab1, tab2, tab3 = st.tabs(["🚀 Live Discovery & Replay", "📊 Observability & Analytics", "📜 System Spec & Invariants"])
+tab1, tab2, tab3 = st.tabs([
+    "🚀 Live Discovery & Replay", 
+    "📊 Observability & Analytics", 
+    "📜 System Spec & Invariants"
+])
+
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 # ==========================================
 # TAB 1: LIVE DISCOVERY & REPLAY
