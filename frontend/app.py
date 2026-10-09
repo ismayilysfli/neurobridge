@@ -9,7 +9,7 @@ from agent.config import load_environment, ROOT
 from agent.client import SandboxClient, SandboxError
 from agent.llm import LLMClient, ModelError
 from agent.runner import explore
-from agent.prompts import public_spec, observable_state
+from agent.prompts import public_spec, observable_state, observable_changes
 from agent.replay import attach_replay, secure_control
 from agent.report import save_report, as_json
 from frontend.local_backend import ensure_backend
@@ -119,6 +119,12 @@ def render_timeline(actions, target):
                     st.write(step['result'])
                 if step.get('inventory_changed'):
                     st.json({'before': step['inventory_before'], 'after': step['inventory_after']})
+                other_changes = {key: value for key, value in
+                                 observable_changes(step.get('before', {}), step.get('after', {})).items()
+                                 if key not in ('coins', 'inventory')}
+                if other_changes:
+                    st.caption('Other observed state changes')
+                    st.json(other_changes)
 
 if start:
     try:

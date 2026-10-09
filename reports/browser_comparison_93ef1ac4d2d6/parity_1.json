@@ -1,0 +1,358 @@
+{
+  "status": "REPRODUCED",
+  "variant": "upgrade_resale",
+  "session_id": "b12cdf6c-849e-4690-8349-0f334af1b19a",
+  "actions": [
+    {
+      "step": 1,
+      "action": "claim_reward",
+      "params": {},
+      "before": {
+        "coins": 100,
+        "title": "Adventurer",
+        "welcome_reward_claimed": false,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Welcome reward credited",
+        "state": {
+          "coins": 150,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 150,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.023331,
+      "coins_before": 100,
+      "coins_after": 150,
+      "coins_delta": 50,
+      "inventory_before": [],
+      "inventory_after": [],
+      "inventory_changed": false
+    },
+    {
+      "step": 2,
+      "action": "buy_item",
+      "params": {
+        "item": "dagger"
+      },
+      "before": {
+        "coins": 150,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Dagger purchased",
+        "state": {
+          "coins": 110,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": false
+            }
+          ],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 150,
+              "coins_after": 110,
+              "note": "Dagger purchased"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 110,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "latency_seconds": 0.016084,
+      "coins_before": 150,
+      "coins_after": 110,
+      "coins_delta": -40,
+      "inventory_before": [],
+      "inventory_after": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_changed": true
+    },
+    {
+      "step": 3,
+      "action": "upgrade_item",
+      "params": {
+        "item": "dagger"
+      },
+      "before": {
+        "coins": 110,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": false
+          }
+        ]
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Dagger upgraded",
+        "state": {
+          "coins": 100,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": [
+            {
+              "item": "dagger",
+              "upgraded": true
+            }
+          ],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 150,
+              "coins_after": 110,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 3,
+              "action": "upgrade_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 110,
+              "coins_after": 100,
+              "note": "Dagger upgraded"
+            }
+          ],
+          "violations": []
+        },
+        "new_violations": []
+      },
+      "after": {
+        "coins": 100,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": true
+          }
+        ]
+      },
+      "latency_seconds": 0.002772,
+      "coins_before": 110,
+      "coins_after": 100,
+      "coins_delta": -10,
+      "inventory_before": [
+        {
+          "item": "dagger",
+          "upgraded": false
+        }
+      ],
+      "inventory_after": [
+        {
+          "item": "dagger",
+          "upgraded": true
+        }
+      ],
+      "inventory_changed": true
+    },
+    {
+      "step": 4,
+      "action": "sell_item",
+      "params": {
+        "item": "dagger"
+      },
+      "before": {
+        "coins": 100,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": [
+          {
+            "item": "dagger",
+            "upgraded": true
+          }
+        ]
+      },
+      "status": "ACCEPTED",
+      "response": {
+        "result": "Dagger sold for 80 coins (spent 50 coins on this item)",
+        "state": {
+          "coins": 180,
+          "title": "Adventurer",
+          "welcome_reward_claimed": true,
+          "inventory": [],
+          "history": [
+            {
+              "step": 1,
+              "action": "claim_reward",
+              "params": {},
+              "coins_before": 100,
+              "coins_after": 150,
+              "note": "Welcome reward credited"
+            },
+            {
+              "step": 2,
+              "action": "buy_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 150,
+              "coins_after": 110,
+              "note": "Dagger purchased"
+            },
+            {
+              "step": 3,
+              "action": "upgrade_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 110,
+              "coins_after": 100,
+              "note": "Dagger upgraded"
+            },
+            {
+              "step": 4,
+              "action": "sell_item",
+              "params": {
+                "item": "dagger"
+              },
+              "coins_before": 100,
+              "coins_after": 180,
+              "note": "Dagger sold for 80 coins (spent 50 coins on this item)"
+            }
+          ],
+          "violations": [
+            {
+              "rule_id": "R2",
+              "code": "PROFITABLE_ITEM_CYCLE",
+              "evidence": "Payout 80 > spent 50 coins",
+              "step": 4
+            }
+          ]
+        },
+        "new_violations": [
+          {
+            "rule_id": "R2",
+            "code": "PROFITABLE_ITEM_CYCLE",
+            "evidence": "Payout 80 > spent 50 coins",
+            "step": 4
+          }
+        ]
+      },
+      "after": {
+        "coins": 180,
+        "title": "Adventurer",
+        "welcome_reward_claimed": true,
+        "inventory": []
+      },
+      "latency_seconds": 0.028516,
+      "coins_before": 100,
+      "coins_after": 180,
+      "coins_delta": 80,
+      "inventory_before": [
+        {
+          "item": "dagger",
+          "upgraded": true
+        }
+      ],
+      "inventory_after": [],
+      "inventory_changed": true
+    }
+  ],
+  "violations": [
+    {
+      "rule_id": "R2",
+      "code": "PROFITABLE_ITEM_CYCLE",
+      "evidence": "Payout 80 > spent 50 coins",
+      "step": 4
+    }
+  ],
+  "errors": [],
+  "complete": true,
+  "matched_violations": [
+    [
+      "R2",
+      "PROFITABLE_ITEM_CYCLE"
+    ]
+  ],
+  "expected_violations": [
+    {
+      "rule_id": "R2",
+      "code": "PROFITABLE_ITEM_CYCLE",
+      "evidence": "Payout 80 > spent 50 coins",
+      "step": 4
+    }
+  ],
+  "initial_state": {
+    "coins": 100,
+    "title": "Adventurer",
+    "welcome_reward_claimed": false,
+    "inventory": []
+  },
+  "final_state": {
+    "coins": 180,
+    "title": "Adventurer",
+    "welcome_reward_claimed": true,
+    "inventory": []
+  },
+  "duration_seconds": 0.073782
+}
