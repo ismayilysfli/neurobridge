@@ -1,0 +1,27 @@
+[
+  {
+    "file": "backend/economy.py",
+    "unchanged": true,
+    "sha256": "87bfe36fcef89422db747cb3e1a95d589a369c951086ac83c9a2fdbb10b600bb"
+  },
+  {
+    "file": "backend/__init__.py",
+    "unchanged": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "backend/app.py",
+    "unchanged": true,
+    "sha256": "01822e013fb5afe570563da74ae9bf577087a6ace0b543fc9bfc8068e00391d5"
+  },
+  {
+    "file": "tests/test_economy.py",
+    "unchanged": true,
+    "sha256": "8f6e968217e28e2dd2f6947508b934fdc055265ca32813ce699ec85108fc56bd"
+  },
+  {
+    "file": "tests/test_http.py",
+    "unchanged": true,
+    "sha256": "67d1c2f5217b6b5c1957f3da46d48513b1c3e950bc8f4198b392cd8b8369f7a0"
+  }
+]

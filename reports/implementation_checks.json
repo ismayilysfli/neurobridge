@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-09T13:38:10.951038+00:00",
+  "backend_unchanged": true,
+  "original_backend_files_verified": 5,
+  "credentials_excluded_from_source_reports_docs": true,
+  "local_env_mode": "0600",
+  "public_model": "gemini-3.1-flash-lite",
+  "benchmark_campaigns": 3,
+  "benchmark_runs": 30,
+  "independent_held_out_scenario": "Not supplied",
+  "durable_hosting": "Not configured; verified temporary demo tunnel",
+  "model_effectiveness": "No statistical superiority claimed; failures and baseline retained",
+  "automated_test_command": "python -m pytest -q",
+  "automated_tests_passed": 49,
+  "backend_tests_modified": false,
+  "unit_model_doubles": "Explicitly labeled and excluded from AI measurements"
+}
